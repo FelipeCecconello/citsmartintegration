@@ -1,27 +1,23 @@
 # CitsmartIntegration
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.5.
+Este teste foi desenvolvido com [Angular CLI](https://github.com/angular/angular-cli) version 16.2.5.
+Certifique-se de ter o Node.js e o Angular CLI instalados
 
-## Development server
+## Instalação
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Clone este repositório em sua máquina local
+2. Navegue até o diretório do projeto
+3. Execute a aplicação com o comendo `ng serve`
 
-## Code scaffolding
+## Server
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+A aplicação rodará por padrão no `http://localhost:4200/`. 
 
-## Build
+## Funcionamento
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+A aplicação separa os chamados pela situação, existem 3 guias para cada tipo de situação que pode ser acessada pelo menu de navegação
+obs: a situação 'Reaberta' foi incluida na situação 'Em andamento' :D
 
-## Running unit tests
+Voce pode clicar no botão 'Detalhes' para ver mais detalhes daquele chamado!
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+ 

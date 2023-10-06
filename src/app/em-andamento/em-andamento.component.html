@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teste Felipe Fontana</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+</head>
+<body>
+
+<ul class="menu">
+  <li><a href="#" class="active">CitsmartIntegration</a></li>
+  <li><a href="/em-andamento">Em andamento</a></li>
+  <li><a href="/fechada">Fechada</a></li>
+  <li><a href="/cancelada">Cancelada</a></li>
+  <li class="slider"></li>
+</ul>
+
+<br><br>
+
+<div class="cards">
+  <article class="information [ card ]" *ngFor="let item of emAndamentoData">
+    <span class="tag" [ngClass]="{'fechada': item.situacao === 'Fechada', 'em-andamento': item.situacao === 'Em andamento' || item.situacao === 'Reaberta', 'cancelada': item.situacao === 'Cancelada'}">{{item.situacao}}</span>
+    <h2 class="title">{{ item.Atividade }}</h2>
+    <p class="info">{{ item.Descricao }}</p>
+    <font size=1>{{ item.Usuario }}</font><br>
+    <font size=1>{{ item.data_solicitacao }}, {{item.nomeprioridade}}</font>
+    <button class="button">
+			<span [routerLink]="['/detalhes', item.idsolicitacaoservico]">Detalhes</span>
+		</button>
+  </article>
+</div>
+
+</body>
+</html>

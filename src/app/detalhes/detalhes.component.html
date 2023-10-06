@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teste Felipe Fontana</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+</head>
+
+<body>
+
+<ul class="menu">
+  <li><a href="#" class="active">CitsmartIntegration</a></li>
+  <li><a href="/em-andamento">Em andamento</a></li>
+  <li><a href="/fechada">Fechada</a></li>
+  <li><a href="/cancelada">Cancelada</a></li>
+  <li class="slider"></li>
+</ul>
+
+<br><br>
+
+<div class="cards">
+  <article class="information [ card ]" *ngFor="let item of dados">
+    <span class="tag" [ngClass]="{'fechada': item.situacao === 'Fechada', 'em-andamento': item.situacao === 'Em andamento', 'cancelada': item.situacao === 'Cancelada'}">{{item.situacao}}</span>
+    <h2 class="title">{{ item.Atividade }}</h2>
+    <p class="info">{{ item.Descricao }}</p>
+    <font size="1" *ngIf="item.gruponivel1">Grupo: {{ item.gruponivel1 }}<br></font>
+    <font size="1" *ngIf="item.analise">Analise: {{ item.analise }}<br></font>
+    <font size="1" *ngIf="item.nota">Nota: {{ item.nota }}<br></font>
+    <font size="1" *ngIf="item.tipoDemanda">Tipo de Demanda: {{ item.tipoDemanda }}<br></font>
+    <font size="1" *ngIf="item.Portfolio">Portfolio: {{ item.Portfolio }}<br></font>
+    <font size="1" *ngIf="item.titulosla">Sla: {{ item.titulosla }}<br></font>
+    <font size="1" *ngIf="item.tempoatrasomm">Tempo de atraso: {{ item.tempoatrasomm }}<br></font>
+    <font size="1" *ngIf="item.OrigemAtendimento">Origem: {{ item.OrigemAtendimento }}<br></font>
+    <font size="1" *ngIf="item.data_solicitacao">{{ item.data_solicitacao }} {{ item.nomeprioridade }}<br></font>
+    <font size="1" *ngIf="item.Servico">Servico: {{ item.Servico }}<br></font>
+    <font size="1" *ngIf="item.Responsavel">Responsavel: {{ item.Responsavel }}<br></font>
+    <font size="1" *ngIf="item.Contrato">Contrato: {{ item.Contrato }}<br></font>
+    <font size="1" *ngIf="item.data_limit">Data limite: {{ item.data_limit }}<br></font>
+  </article>
+</div>
+
+</body>
+</html>
